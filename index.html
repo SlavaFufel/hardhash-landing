@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>СКЗИ Hard Hash — учебный лендинг</title>
+<meta name="description" content="Учебный лендинг о программном средстве контроля целостности Hard Hash. Студенческий проект, не официальный сайт производителя.">
+<meta name="robots" content="noindex, nofollow">
+<!--COUNTERS-->
+<style>
+  :root {
+    --bg: #f6f7fb; --card: #ffffff; --text: #18202f; --muted: #5b6475;
+    --accent: #1f5eff; --accent-2: #0f3bb3; --line: #e2e6ef; --note: #fff6d6;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  .note { background: var(--note); border-bottom: 1px solid #f0dc8f; font-size: 14px; padding: 8px 0; }
+  header.hero { background: linear-gradient(135deg, #0d1b3d, #1f5eff); color: #fff; padding: 64px 0 72px; }
+  .hero h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.15; margin: 0 0 16px; }
+  .hero p { font-size: 19px; max-width: 640px; margin: 0 0 28px; color: #dfe7ff; }
+  .btn { display: inline-block; background: #fff; color: var(--accent-2); font-weight: 600; padding: 14px 26px; border-radius: 10px; text-decoration: none; border: 0; cursor: pointer; font-size: 17px; }
+  .btn.primary { background: var(--accent); color: #fff; }
+  section { padding: 56px 0; }
+  h2 { font-size: 30px; margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+  .card h3 { margin: 0 0 8px; font-size: 19px; }
+  .card p { margin: 0; color: var(--muted); }
+  ol.steps { padding-left: 22px; } ol.steps li { margin-bottom: 10px; }
+  form { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; max-width: 520px; }
+  label { display: block; font-weight: 600; margin: 0 0 6px; }
+  input, textarea { width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 8px; font: inherit; margin-bottom: 16px; }
+  #thanks { display: none; background: #e7f6ec; border: 1px solid #a9dcb8; border-radius: 14px; padding: 24px; max-width: 520px; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="note"><div class="wrap">Учебный проект студента группы ПО-1 для практических занятий по интернет-маркетингу. Это не официальный сайт производителя: актуальная информация о продукте — на <a href="https://www.belhard.com/hard-hash/" rel="nofollow">belhard.com</a>.</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>СКЗИ Hard Hash — контроль целостности ПО и данных</h1>
+    <p>Белорусское программное средство криптографической защиты информации: обнаруживает удаление, изменение и подмену файлов с помощью хэш-функции по СТБ 34.101.31-2011.</p>
+    <a class="btn" id="cta-top" href="#request">Запросить условия</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>Что делает Hard Hash</h2>
+      <div class="grid">
+        <div class="card"><h3>Контроль целостности</h3><p>Считает эталонные хэш-значения файлов и сравнивает их при проверке.</p></div>
+        <div class="card"><h3>Обнаружение изменений</h3><p>Показывает удалённые, изменённые и добавленные данные.</p></div>
+        <div class="card"><h3>Белорусский стандарт</h3><p>Хэширование по СТБ 34.101.31-2011 (алгоритм belt-hash).</p></div>
+        <div class="card"><h3>Работа в Windows</h3><p>Поддерживаются Windows 8 и Windows 10.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff">
+    <div class="wrap">
+      <h2>Как проходит внедрение</h2>
+      <ol class="steps">
+        <li>Вы оставляете заявку и описываете, какие данные нужно контролировать.</li>
+        <li>Специалист уточняет требования и количество рабочих мест.</li>
+        <li>Вы получаете условия поставки и помощь с установкой.</li>
+      </ol>
+      <a class="btn primary" id="cta-middle" href="#request">Оставить заявку</a>
+    </div>
+  </section>
+
+  <section id="request">
+    <div class="wrap">
+      <h2>Заявка</h2>
+      <form id="lead-form" novalidate>
+        <label for="name">Имя</label>
+        <input id="name" name="name" autocomplete="off" placeholder="Например, Иван">
+        <label for="company">Организация</label>
+        <input id="company" name="company" autocomplete="off" placeholder="Название организации">
+        <label for="msg">Задача</label>
+        <textarea id="msg" name="msg" rows="3" placeholder="Что нужно контролировать"></textarea>
+        <button class="btn primary" type="submit" id="form-submit">Отправить</button>
+        <p style="font-size:13px;color:var(--muted);margin:14px 0 0">Учебная форма: данные никуда не отправляются и не сохраняются.</p>
+      </form>
+      <div id="thanks"><strong>Спасибо!</strong> Это учебный лендинг, поэтому заявка не отправлена. Чтобы связаться с производителем, используйте официальный сайт.</div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">Учебный лендинг, 2026. Названия продукта и компании принадлежат их владельцам.</div></footer>
+
+<script>
+  function track(goal) {
+    try { if (window.ym && window.YM_ID) ym(window.YM_ID, 'reachGoal', goal); } catch (e) {}
+    try { if (window.gtag) gtag('event', goal); } catch (e) {}
+  }
+  document.querySelectorAll('[id^="cta-"]').forEach(function (a) {
+    a.addEventListener('click', function () { track('cta_click'); });
+  });
+  document.getElementById('lead-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    track('form_send');
+    this.style.display = 'none';
+    document.getElementById('thanks').style.display = 'block';
+  });
+</script>
+</body>
+</html>
